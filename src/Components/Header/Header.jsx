@@ -153,8 +153,8 @@ const Header = () => {
               transformOrigin={{ vertical: 'top', horizontal: 'center' }}
             >
               <MenuItem>
-                <Link href="tel:+37529XXXXXX" sx={{ display: 'flex', alignItems: 'center' }}>
-                  <PhoneIphoneIcon sx={{ mr: 1 }} /> +375 (29) XXX‑XXX
+                <Link href="tel:+375292768425" sx={{ display: 'flex', alignItems: 'center' }}>
+                  <PhoneIphoneIcon sx={{ mr: 1 }} /> +375 29 276 84 25
                 </Link>
               </MenuItem>
 
@@ -183,10 +183,10 @@ const Header = () => {
           >
             <Link
               sx={{ color: '#FFF', display: 'flex', alignItems: 'center' }}
-              href="tel:+37529XXXXXX"
+              href="tel:+375292768425"
             >
               <PhoneIphoneIcon sx={{ mr: 1 }} />
-              +375 (29) XXX‑XXX
+              +375 29 276 84 25
             </Link>
 
             <Link
