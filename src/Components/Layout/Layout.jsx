@@ -10,7 +10,8 @@ const Layout = () => {
     <Box
       sx={{
         width: '100%',
-        minHeight: { xs: 'auto', md: '350px' },
+        // minHeight: { xs: 'auto', md: '350px' },
+        height: '100vh',
         background: 'linear-gradient(to right, #97c2e8 0%, #1e88e5 30%, #5c9edc 50%, #4dd4dd 100%)',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
@@ -26,12 +27,11 @@ const Layout = () => {
           position: 'relative',
           width: { xs: '100%', md: '45%' },
 
-          // уменьшенная высота на десктопе
           height: {
             xs: '320px',
             sm: '380px',
-            md: '300px', // ← уменьшено
-            lg: '350px', // ← можно менять
+            md: '300px',
+            lg: '350px',
           },
 
           borderRadius: '12px',
