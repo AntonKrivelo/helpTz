@@ -7,9 +7,11 @@ const About = () => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-
         gap: { xs: 3, md: 4 },
         width: '100%',
+        maxWidth: '1300px',
+        mx: 'auto',
+        px: { xs: 2, sm: 4, md: 8 },
         background: 'linear-gradient(135deg, #97c2e8 0%, #1e88e5 35%, #5c9edc 65%, #4dd4dd 100%)',
         borderRadius: { xs: '14px', md: '20px' },
         padding: { xs: '16px', sm: '24px', md: '40px' },
@@ -64,12 +66,7 @@ const About = () => {
           width: '100%',
         }}
       >
-        <Box
-          sx={{
-            flex: 1,
-            width: '100%',
-          }}
-        >
+        <Box sx={{ flex: 1, width: '100%' }}>
           <Box
             component="img"
             src=""

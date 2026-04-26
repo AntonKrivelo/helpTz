@@ -6,37 +6,16 @@ const Helping = () => {
   const [showAll, setShowAll] = useState(false);
 
   const cards = [
-    {
-      title: 'Сбербанк',
-      text: 'Номер карты: 1234 5678 9012 3456',
-    },
-    {
-      title: 'ЕРИП',
-      text: 'Путь: Благотворительность → Помощь детям → Егор',
-    },
-    {
-      title: 'Беларусбанк',
-      text: 'BY12 AKBB 3012 0000 0000 0000 0000',
-    },
-    {
-      title: 'Прямой перевод',
-      text: 'Получатель: Иван Иванов',
-    },
+    { title: 'Сбербанк', text: 'Номер карты: 1234 5678 9012 3456' },
+    { title: 'ЕРИП', text: 'Путь: Благотворительность → Помощь детям → Егор' },
+    { title: 'Беларусбанк', text: 'BY12 AKBB 3012 0000 0000 0000 0000' },
+    { title: 'Прямой перевод', text: 'Получатель: Иван Иванов' },
   ];
 
   const extraCards = [
-    {
-      title: 'PayPal',
-      text: 'example@email.com',
-    },
-    {
-      title: 'Wise',
-      text: 'IBAN: LT12 1234 5678 9012',
-    },
-    {
-      title: 'Криптовалюта',
-      text: 'BTC адрес: 1A1zP1...',
-    },
+    { title: 'PayPal', text: 'example@email.com' },
+    { title: 'Wise', text: 'IBAN: LT12 1234 5678 9012' },
+    { title: 'Криптовалюта', text: 'BTC адрес: 1A1zP1...' },
   ];
 
   const handleOpen = (index) => {
@@ -44,7 +23,14 @@ const Helping = () => {
   };
 
   return (
-    <Box sx={{ mt: 5 }}>
+    <Box
+      sx={{
+        mt: 5,
+        px: { xs: 2, sm: 4, md: 8 },
+        maxWidth: '1300px',
+        mx: 'auto',
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
