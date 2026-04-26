@@ -1,5 +1,6 @@
 import Header from './Components/Header/Header';
 import Layout from './Components/Layout/Layout';
+import Favorites from './Components/Favorites/Favorites';
 import './index.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Layout />
+      <Favorites />
     </div>
   );
 }

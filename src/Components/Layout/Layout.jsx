@@ -4,18 +4,17 @@ import belBank from '../../icons/belBANK.png';
 import belInvest from '../../icons/belInvest.png';
 import Sber from '../../icons/Sber.png';
 import Photo from '../../image/photo.jpg';
+import styles from './Layout.module.css';
 
 const Layout = () => {
   return (
     <Box
       sx={{
         width: '100%',
-        // minHeight: { xs: 'auto', md: '350px' },
-        height: '100vh',
         background: 'linear-gradient(to right, #97c2e8 0%, #1e88e5 30%, #5c9edc 50%, #4dd4dd 100%)',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
-        alignItems: 'center',
+        alignItems: 'stretch',
         justifyContent: 'space-between',
         padding: { xs: '15px', md: '20px' },
         boxSizing: 'border-box',
@@ -26,46 +25,14 @@ const Layout = () => {
         sx={{
           position: 'relative',
           width: { xs: '100%', md: '45%' },
-
-          height: {
-            xs: '320px',
-            sm: '380px',
-            md: '300px',
-            lg: '350px',
-          },
-
-          borderRadius: '12px',
           overflow: 'hidden',
           display: 'flex',
+          flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(255,255,255,0.15)',
-
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: `url(${Photo})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'blur(20px)',
-            transform: 'scale(1.2)',
-            zIndex: 1,
-          },
         }}
       >
-        <img
-          src={Photo}
-          alt="preview"
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            objectPosition: 'center',
-          }}
-        />
+        <img className={styles.imgPhoto} src={Photo} alt="preview" />
       </Box>
 
       <Box
@@ -77,8 +44,10 @@ const Layout = () => {
           color: '#fff',
           display: 'flex',
           flexDirection: 'column',
+          justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
+          flex: 1,
           gap: { xs: '10px', md: '15px' },
         }}
       >
