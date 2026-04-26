@@ -7,15 +7,15 @@ import Diversity1Icon from '@mui/icons-material/Diversity1';
 const Favorites = () => {
   const items = [
     {
-      icon: <VolunteerActivismIcon sx={{ color: pink[500] }} />,
+      icon: <VolunteerActivismIcon sx={{ color: pink[500], fontSize: 34 }} />,
       text: 'Смертельное заболевание',
     },
     {
-      icon: <Diversity1Icon sx={{ color: pink[500] }} />,
+      icon: <Diversity1Icon sx={{ color: pink[500], fontSize: 34 }} />,
       text: 'Остался год на спасение',
     },
     {
-      icon: <FavoriteIcon sx={{ color: pink[500] }} />,
+      icon: <FavoriteIcon sx={{ color: pink[500], fontSize: 34 }} />,
       text: 'Шаг к спасению',
     },
   ];
@@ -24,74 +24,75 @@ const Favorites = () => {
     <Box
       sx={{
         width: '100%',
-        backgroundColor: 'rgba(255,255,255,0.18)',
-        backdropFilter: 'blur(8px)',
-        borderRadius: { xs: '14px', md: '18px' },
-        p: { xs: 1.5, sm: 2, md: 3 },
-
-        display: 'grid',
-        gridTemplateColumns: {
-          xs: '1fr',
-          sm: '1fr',
-          md: 'repeat(3,1fr)',
-        },
-
-        gap: 2,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      {items.map((item, index) => (
-        <Box
-          key={index}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 1.2,
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: '1350px',
 
-            backgroundColor: 'rgba(255,255,255,0.45)',
-            borderRadius: '12px',
+          backgroundColor: 'rgba(255,255,255,0.18)',
+          backdropFilter: 'blur(10px)',
+          borderRadius: { xs: '16px', md: '22px' },
 
-            px: { xs: 1.2, sm: 2 },
-            py: { xs: 1.2, sm: 1.5 },
+          p: { xs: 3, sm: 4 },
 
-            minHeight: { xs: '58px', sm: '64px', md: '72px' },
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: '1fr',
+            sm: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+          },
 
-            overflow: 'hidden',
-          }}
-        >
+          gap: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        {items.map((item, index) => (
           <Box
+            key={index}
             sx={{
-              flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
+              justifyContent: { xs: 'center', sm: 'flex-start' },
+
+              textAlign: { xs: 'center', sm: 'left' },
+
+              gap: 2,
+
+              backgroundColor: 'rgba(255,255,255,0.55)',
+              borderRadius: '16px',
+
+              p: { xs: 2, sm: 2.5 },
+
+              minHeight: { xs: 75, sm: 90, md: 100 },
+              width: '100%',
             }}
           >
-            {item.icon}
+            <Box sx={{ display: 'flex', flexShrink: 0 }}>{item.icon}</Box>
+
+            <Typography
+              sx={{
+                color: '#111',
+                fontWeight: 600,
+
+                fontSize: {
+                  xs: '15px',
+                  sm: '16px',
+                  md: '18px',
+                },
+
+                lineHeight: 1.4,
+                flex: 1,
+              }}
+            >
+              {item.text}
+            </Typography>
           </Box>
-
-          <Typography
-            sx={{
-              color: '#111',
-              fontWeight: 500,
-
-              fontSize: {
-                xs: '12px',
-                sm: '14px',
-                md: '18px',
-              },
-
-              lineHeight: 1.25,
-
-              wordBreak: 'break-word',
-              overflowWrap: 'break-word',
-
-              flex: 1,
-            }}
-          >
-            {item.text}
-          </Typography>
-        </Box>
-      ))}
+        ))}
+      </Box>
     </Box>
   );
 };
