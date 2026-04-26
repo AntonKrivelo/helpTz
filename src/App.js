@@ -2,6 +2,7 @@ import Header from './Components/Header/Header';
 import Layout from './Components/Layout/Layout';
 import Favorites from './Components/Favorites/Favorites';
 import About from './Components/About/About';
+import Helping from './Components/Helping/Helping';
 import './index.css';
 
 function App() {
@@ -10,9 +11,9 @@ function App() {
       <Header />
       <Layout />
       <Favorites />
-      <div className="container">
-        <About />
-      </div>
+      <About />
+      <Helping />
+      {/* <div className="container"></div> */}
     </div>
   );
 }
